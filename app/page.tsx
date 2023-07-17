@@ -1,5 +1,18 @@
 import Image from 'next/image';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  /** The title of the document */
+  title: 'Alexia Planas Lee',
+  description:
+    "Visual creative with work showcased in Vogue Italia, Vanidad, and NYC's Times Square",
+  keywords: ['Alexia', 'Alexia Planas', 'Alexia Planas Lee', 'Visual creative'],
+  openGraph: {
+    images: '/images/dinner_for_none.jpg',
+  },
+};
+
 export default function Homepage() {
   return (
     <div className="w-full h-screen text-center relative max-w-5xl mx-auto overflow-hidden">
