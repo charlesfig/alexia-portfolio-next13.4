@@ -1,67 +1,129 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-import { Metadata } from 'next';
-import { title } from 'process';
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   /** The title of the document */
-  title: 'Alexia Planas Lee',
-  description:
-    'Visual creative with work showcased in Vogue Italia, Times Square, and Vanidad.',
-  keywords: ['Alexia', 'Alexia Planas', 'Alexia Planas Lee', 'Visual creative'],
+  title: "Alexia Planas Lee",
+  description: "Visual creative with work showcased in Vogue Italia, Times Square, and Vanidad.",
+  keywords: ["Alexia", "Alexia Planas", "Alexia Planas Lee", "Visual creative"],
 
   openGraph: {
-    title: 'Alexia Planas Lee',
-    description:
-      'Visual creative with work showcased in Vogue Italia and Times Square',
-    url: 'www.alexiaplanaslee.com',
-    siteName: 'Portfolio - Alexia Planas Lee',
+    title: "Alexia Planas Lee",
+    description: "Visual creative with work showcased in Vogue Italia and Times Square",
+    url: "www.alexiaplanaslee.com",
+    siteName: "Portfolio - Alexia Planas Lee",
     images: [
       {
-        url: '/images/dinner_for_none.jpg',
+        url: "/images/dinner_for_none.jpg",
         width: 824,
         height: 1024,
       },
     ],
-    type: 'website',
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Alexia Planas Lee',
-    description:
-      'Visual creative with work showcased in Vogue Italia and Times Square',
+    card: "summary_large_image",
+    title: "Alexia Planas Lee",
+    description: "Visual creative with work showcased in Vogue Italia and Times Square",
     images: [
       {
-        url: '/images/dinner_for_none.jpg',
+        url: "/images/dinner_for_none.jpg",
         width: 824,
         height: 1024,
       },
     ],
-    site: 'www.alexiaplanaslee.com',
+    site: "www.alexiaplanaslee.com",
   },
 };
 
+type WorkProps = {
+  name: string;
+  image: { src: string; height: number; width: number };
+  publication: string;
+};
+const main_work: WorkProps = {
+  name: "Dinner for None",
+  image: { src: "/images/dinner_for_none.jpg", height: 1024, width: 824 },
+  publication: "PETRIe Inventory",
+};
+const grid_works: Array<WorkProps> = [
+  {
+    name: "Dinner for None",
+    image: { src: "/images/dinner_for_none.jpg", height: 1024, width: 824 },
+    publication: "PETRIe Inventory",
+  },
+  {
+    name: "Self-isolation",
+    image: { src: "/images/dinner_for_none.jpg", height: 1024, width: 824 },
+    publication: "Lobster Magazine",
+  },
+  {
+    name: "So you are, so you love",
+    image: { src: "/images/dinner_for_none.jpg", height: 1024, width: 824 },
+    publication: "Odalisque Magazine / Vogue Italia’s PhotoVogue",
+  },
+  {
+    name: "Funeral march of a marionette ",
+    image: { src: "/images/funeral_march.jpeg", height: 930, width: 750 },
+    publication: "No Future Magazine",
+  },
+  {
+    name: "Of moon and earth",
+    image: { src: "/images/funeral_march.jpeg", height: 930, width: 750 },
+    publication: "Lobster Magazine",
+  },
+];
+
+const Work = ({ name, image, publication, className = "" }: WorkProps & { className?: string }) => (
+  <div id="work" className={`relative w-full group overflow-hidden ${className}`}>
+    <div className="w-full bg-black/20 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all h-full absolute top-0 p-2 flex flex-col items-end justify-end text-white">
+      <p className="uppercase text-right">{name}</p>
+      <p className="italic text-right text-sm opacity-80 ">{publication}</p>
+    </div>
+    <Image className="w-full max-w-xl mx-auto" alt={`"${name}" by Alexia Planas Lee`} {...image} />
+  </div>
+);
+
 export default function Homepage() {
   return (
-    <div className="w-full h-screen text-center relative max-w-5xl mx-auto overflow-hidden">
-      <header className="sticky top-0 left-0 py-10">
-        <h1 className="text-center text-5xl font-medium uppercase">
+    <div className="w-full text-center relative max-w-xl mx-auto p-4">
+      <header className="sticky top-0 left-0 py-10 bg-white z-10">
+        <h1 className="text-center text-4xl md:text-5xl font-medium uppercase">
           Alexia Planas Lee
         </h1>
-        <div className="text-center uppercase tracking-widest mt-3">
-          <p>aplanaslee@gmail.com</p>
-          <p>Barcelona, Spain</p>
-          <p>+34 698 939 544</p>
+        <p className="tracking-wider uppercase">
+          Creative Direction | Fashion Styling | Production
+        </p>
+        <div className="text-right absolute -left-14 top-36 flex flex-col gap-2 w-12">
+          {["Contact", "About", "Works"].map((item) => (
+            <div className="hover:font-bold hover:scale-105 transition-all cursor-pointer">
+              {item}
+            </div>
+          ))}
         </div>
       </header>
-      <div className="w-full">
-        <Image
-          className="w-full"
-          src="/images/dinner_for_none.jpg"
-          height={1024}
-          width={824}
-          alt="Dinner for None by Alexia Planas Lee"
-        />
+
+      <div id="wrapper" className="w-full">
+        {/* Main Work */}
+        <Work {...main_work} />
+
+        {/* Works Grid */}
+        <div className="mt-4 grid grid-cols-2 gap-2">
+          {grid_works.map((work) => (
+            <Work {...work} className="aspect-square" />
+          ))}
+        </div>
+
+        {/* Description */}
+        <div className="mt-10 w-full text-left">
+          Raised in Barcelona, I'm a Spanish and Chinese visual creative with work showcased in
+          Vogue Italia, Vanidad, and New York City's Times Square. As Head of Impact Design and
+          Innovation at a Web3 fashion circularity startup, I have a competitive understanding of
+          new sustainable supply chain solutions and new technologies applied to the fashion
+          industry - blockchain product transparency, Al, metaverse experiences (VR AR), and digital
+          twins.
+        </div>
       </div>
     </div>
   );
