@@ -1,15 +1,43 @@
 import Image from 'next/image';
 
 import { Metadata } from 'next';
+import { title } from 'process';
 
 export const metadata: Metadata = {
   /** The title of the document */
   title: 'Alexia Planas Lee',
   description:
-    "Visual creative with work showcased in Vogue Italia, Vanidad, and NYC's Times Square",
+    'Visual creative with work showcased in Vogue Italia, Times Square, and Vanidad.',
   keywords: ['Alexia', 'Alexia Planas', 'Alexia Planas Lee', 'Visual creative'],
+
   openGraph: {
-    images: '/images/dinner_for_none.jpg',
+    title: 'Alexia Planas Lee',
+    description:
+      'Visual creative with work showcased in Vogue Italia and Times Square',
+    url: 'www.alexiaplanaslee.com',
+    siteName: 'Portfolio - Alexia Planas Lee',
+    images: [
+      {
+        url: '/images/dinner_for_none.jpg',
+        width: 824,
+        height: 1024,
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Alexia Planas Lee',
+    description:
+      'Visual creative with work showcased in Vogue Italia and Times Square',
+    images: [
+      {
+        url: '/images/dinner_for_none.jpg',
+        width: 824,
+        height: 1024,
+      },
+    ],
+    site: 'www.alexiaplanaslee.com',
   },
 };
 
