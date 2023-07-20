@@ -13,7 +13,7 @@ export const grid_works: Array<Work> = [
     project_id: 2,
     project_name: "Funeral march of a marionette",
     image: { src: "/images/funeral_march_of_a_marionette/1.jpg", height: 1271, width: 977 },
-    publication: "No Future Magazine",
+    publication: "No Future Magazine Cover Story",
     className: "object-top",
   },
   {
@@ -44,5 +44,6 @@ export const grid_works: Array<Work> = [
     project_name: "Forward motion",
     image: { src: "/images/forward_motion/3.jpg", height: 2835, width: 1889 },
     publication: "Luxiders",
+    className: "",
   },
 ];
