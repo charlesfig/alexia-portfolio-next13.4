@@ -15,7 +15,6 @@ export default function Slideshow() {
   const getNextProjectDisabled = selectedWork.project_id == grid_works.slice(-1)[0].project_id;
 
   function handleKeyDown(e) {
-    console.log(e);
     if (e.key == "ArrowRight" && !getNextProjectDisabled) {
       getNextProject();
     } else if (e.key == "ArrowLeft" && !getPrevProjectDisabled) {
@@ -28,18 +27,19 @@ export default function Slideshow() {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [getNextProjectDisabled, getPrevProjectDisabled, getNextProject, getPrevProject]);
 
   return (
     <Dialog
       open={isOpen}
       onClose={() => setIsOpen(false)}
-      className="fixed top-0 left-0 w-screen bg-black/80 z-10 h-screen flex justify-center items-center"
+      className="fixed top-0 left-0 w-screen bg-black/80 z-10 h-screen flex justify-center items-center select-none"
     >
       <Dialog.Panel className="object-contain relative flex items-center justify-center h-full w-full">
         <button
           className="absolute top-10 md:top-20 right-10 md:right-20 text-white uppercase text-3xl z-20"
           onClick={() => setIsOpen(false)}
+          tabIndex={-1}
         >
           Close
         </button>
@@ -66,6 +66,7 @@ export default function Slideshow() {
           onClick={getPrevProject}
           disabled={getPrevProjectDisabled}
           className="disabled:hidden absolute left-0 h-full w-1/2 flex justify-start items-center group"
+          tabIndex={-1}
         >
           <p className="text-gray-600 uppercase text-3xl ml-10 md:ml-20 group-hover:text-gray-200 transition-all">
             Left
@@ -76,6 +77,7 @@ export default function Slideshow() {
           onClick={getNextProject}
           disabled={getNextProjectDisabled}
           className="disabled:hidden absolute right-0 h-full w-1/2 flex justify-end items-center group"
+          tabIndex={-1}
         >
           <p className="text-gray-600 uppercase text-3xl mr-10 md:mr-20 group-hover:text-gray-200 transition-all">
             Right
