@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.15",
     "eslint-config-next": "^13.4.10",
     "next": "^13.4.10",
     "react": "^18.2.0",
