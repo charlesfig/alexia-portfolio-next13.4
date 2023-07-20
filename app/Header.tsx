@@ -10,7 +10,7 @@ export default function Header() {
       >
         Alexia Planas Lee
       </Link>
-      <p className="tracking-wider uppercase mt-1">
+      <p className="tracking-wider uppercase mt-1 md:text-base text-sm">
         Creative Direction | Fashion Styling | Production
       </p>
       <Navigation />
