@@ -18,7 +18,7 @@ const ProjectPreview = ({ className = "", imgClassName = "", ...work }: WorkProp
       <p className="italic text-right text-sm opacity-80 ">{work.publication}</p>
     </div>
     <Image
-      className={`object-cover object-top max-w-xl w-full h-full mx-auto ${imgClassName}`}
+      className={`object-cover max-w-xl w-full h-full mx-auto ${imgClassName}`}
       alt={`"${work.project_name}" by Alexia Planas Lee`}
       {...work.image}
     />
