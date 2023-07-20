@@ -68,7 +68,7 @@ export default function Slideshow() {
           className="disabled:hidden absolute left-0 h-full w-1/2 flex justify-start items-center group"
           tabIndex={-1}
         >
-          <p className="text-gray-600 uppercase text-3xl ml-10 md:ml-20 group-hover:text-gray-200 transition-all">
+          <p className="text-gray-600 uppercase text-3xl ml-10 md:ml-20 group-hover:text-gray-200 transition-all drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
             Left
           </p>
         </button>
@@ -79,7 +79,7 @@ export default function Slideshow() {
           className="disabled:hidden absolute right-0 h-full w-1/2 flex justify-end items-center group"
           tabIndex={-1}
         >
-          <p className="text-gray-600 uppercase text-3xl mr-10 md:mr-20 group-hover:text-gray-200 transition-all">
+          <p className="text-gray-600 uppercase text-3xl mr-10 md:mr-20 group-hover:text-gray-200 transition-all drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
             Right
           </p>
         </button>
