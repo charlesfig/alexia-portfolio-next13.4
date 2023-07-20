@@ -55,7 +55,7 @@ export default function Slideshow() {
         <p className="text-white absolute bottom-20 left-20">
           <Dialog.Title>{selectedWork.project_name}</Dialog.Title>
           <Dialog.Description>{selectedWork.publication}</Dialog.Description>
-          <p>This is the project's description</p>
+          {/* <p>This is the project's description</p> */}
         </p>
 
         <button
