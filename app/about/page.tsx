@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Header from "../Header";
 
 const page_title = "Alexia Planas Lee - About";
@@ -44,14 +45,26 @@ export default function About() {
       <Header />
 
       <div id="wrapper" className="w-full">
+        <Image alt="" src="/images/headshot.jpg" height={612} width={783} />
         {/* Description */}
-        <div className="w-full text-justify">
-          Raised in Barcelona, I'm a Spanish and Chinese visual creative with work showcased in
-          Vogue Italia, Vanidad, and New York City's Times Square. As Head of Impact Design and
-          Innovation at a Web3 fashion circularity startup, I have a competitive understanding of
-          new sustainable supply chain solutions and new technologies applied to the fashion
-          industry - blockchain product transparency, Al, metaverse experiences (VR AR), and digital
-          twins.
+        <div className="w-full text-justify mt-6 gap-2 flex flex-col">
+          <p>
+            Raised in Barcelona, Alexia Planas Lee is a Spanish and Chinese visual creative with
+            work showcased in Vogue Italia, Vanidad, and New York City’s Times Square.{" "}
+          </p>
+          <p>
+            After completing her studies in Business Management & Marketing at King’s College
+            London, Alexia gained experience at Hong Kong Tatler, Dazed and Confused, and styling
+            British music band Years & Years, soon before beginning to direct, style and produce her
+            own fashion editorials and commercial works.{" "}
+          </p>
+          <p>
+            Alexia often references art, psychology, and music in her work. As Head of Design and
+            Innovation at lablaco and its annual virtual reality event, Circular Fashion Summit, she
+            has also developed a competitive understanding of fashion circularity and new
+            technologies applied to the industry including blockchain product transparency, AI,
+            metaverse experiences (VR, AR), and digital twins.
+          </p>
         </div>
 
         {/* Contact Info */}
