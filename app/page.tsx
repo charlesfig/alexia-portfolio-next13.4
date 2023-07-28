@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import Header from "./Header";
 import Works from "./Works";
+import ContactInfo from "./contact/ContactInfo";
 import { grid_works } from "./data";
 import { Work } from "./types";
 
@@ -78,8 +79,7 @@ export default function Homepage() {
 
         <Works />
 
-        {/* Contact Info */}
-        <div className="my-20 w-full text-center">contact@alexiaplanaslee.com</div>
+        <ContactInfo />
       </div>
     </div>
   );

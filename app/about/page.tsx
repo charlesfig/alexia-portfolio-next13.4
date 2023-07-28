@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Header from "../Header";
+import ContactInfo from "../contact/ContactInfo";
 
 const page_title = "Alexia Planas Lee - About";
 
@@ -67,8 +68,7 @@ export default function About() {
           </p>
         </div>
 
-        {/* Contact Info */}
-        <div className="my-20 w-full text-center">contact@alexiaplanaslee.com</div>
+        <ContactInfo />
       </div>
     </div>
   );
