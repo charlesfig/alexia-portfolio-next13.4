@@ -9,7 +9,7 @@ export default function Navigation() {
   return (
     <div
       className={
-        "md:text-right md:absolute -left-20 top-36 flex md:flex-col md:gap-2 md:w-16" +
+        "md:text-right md:absolute -left-[90px] top-[170px] flex md:flex-col md:gap-2 md:w-16" +
         " items-center md:items-end justify-center gap-5 mt-4 md:mt-0"
       }
     >

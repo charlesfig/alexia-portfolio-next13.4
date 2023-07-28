@@ -65,7 +65,7 @@ const MainWork = ({
 
 export default function Homepage() {
   return (
-    <div className="w-full text-center relative max-w-xl mx-auto p-4">
+    <div className="w-full text-center relative max-w-xl mx-auto px-4">
       <Header />
 
       <div id="wrapper" className="w-full">
