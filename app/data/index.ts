@@ -181,7 +181,7 @@ export const grid_works: Array<Work> = [
     photo_id: 21,
     project_id: 5,
     project_name: "In isolation",
-    image: { src: "/images/in_isolation/dress.JPG", height: 8070, width: 5469 },
+    image: { src: "/images/in_isolation/dress.jpg", height: 8070, width: 5469 },
     publication: "Lobster Magazine",
   },
   {
@@ -189,7 +189,7 @@ export const grid_works: Array<Work> = [
     photo_id: 22,
     project_id: 5,
     project_name: "In isolation",
-    image: { src: "/images/in_isolation/back.JPG", height: 1440, width: 922 },
+    image: { src: "/images/in_isolation/back.jpg", height: 1440, width: 922 },
     publication: "Lobster Magazine",
   },
   {
@@ -197,7 +197,7 @@ export const grid_works: Array<Work> = [
     photo_id: 23,
     project_id: 5,
     project_name: "In isolation",
-    image: { src: "/images/in_isolation/crown.JPG", height: 6839, width: 5194 },
+    image: { src: "/images/in_isolation/crown.jpg", height: 6839, width: 5194 },
     publication: "Lobster Magazine",
   },
   // -----------------------------------------------------------------------------------------------
