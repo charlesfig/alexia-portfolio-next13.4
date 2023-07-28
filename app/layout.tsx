@@ -1,11 +1,6 @@
-import { Oswald } from "next/font/google";
 import "../styles/globals.css";
 import SlideshowProvider from "./context";
-
-const oswald = Oswald({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700"],
-});
+import { oswald } from "./fonts";
 
 export const metadata = {
   title: "Create Next App",

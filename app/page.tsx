@@ -5,6 +5,7 @@ import Header from "./Header";
 import Works from "./Works";
 import ContactInfo from "./contact/ContactInfo";
 import { grid_works } from "./data";
+import { taviraj } from "./fonts";
 import { Work } from "./types";
 
 const page_title = "Alexia Planas Lee";
@@ -72,7 +73,7 @@ export default function Homepage() {
         <MainWork {...grid_works[0]} imgClassName="-mt-[26px]" />
 
         {/* Description */}
-        <div className="my-10 w-full text-justify">
+        <div className={`${taviraj.className} my-10 w-full text-justify tracking-tight`}>
           Alexia Planas Lee is a Spanish and Chinese visual creative with work showcased in Vogue
           Italia, Vanidad, and New York City’s Times Square.
         </div>
