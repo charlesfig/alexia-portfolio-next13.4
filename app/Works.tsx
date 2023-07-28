@@ -37,11 +37,14 @@ export default function Works() {
     <>
       <Slideshow />
       <div className="grid grid-cols-2 gap-2">
-        {grid_works.map((work) => (
-          <button onClick={() => openProject(work.project_id)}>
-            <ProjectPreview {...work} className="aspect-square" imgClassName={work.className} />
-          </button>
-        ))}
+        {grid_works.map((work) => {
+          if (work.preview == false) return;
+          return (
+            <button onClick={() => openProject(work.project_id)}>
+              <ProjectPreview {...work} className="aspect-square" imgClassName={work.className} />
+            </button>
+          );
+        })}
       </div>
     </>
   );

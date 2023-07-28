@@ -5,6 +5,7 @@ export type Image = {
 };
 
 export type Work = {
+  preview: boolean;
   photo_id: number;
   project_id: number;
   project_name: string;

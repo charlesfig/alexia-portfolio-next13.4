@@ -9,16 +9,16 @@ import { grid_works } from "./data";
 export default function Slideshow() {
   let { isOpen, setIsOpen, selectedWork, setSelectedWork } = useContext(SlideshowContext);
 
-  const getPrevProject = () => setSelectedWork(grid_works[selectedWork.project_id - 2]);
-  const getPrevProjectDisabled = selectedWork.project_id == grid_works[0].project_id;
-  const getNextProject = () => setSelectedWork(grid_works[selectedWork.project_id]);
-  const getNextProjectDisabled = selectedWork.project_id == grid_works.slice(-1)[0].project_id;
+  const getPrevWork = () => setSelectedWork(grid_works[selectedWork.photo_id - 2]);
+  const getPrevProjectDisabled = selectedWork.photo_id == grid_works[0].photo_id;
+  const getNextWork = () => setSelectedWork(grid_works[selectedWork.photo_id]);
+  const getNextProjectDisabled = selectedWork.photo_id == grid_works.slice(-1)[0].photo_id;
 
   function handleKeyDown(e) {
     if (e.key == "ArrowRight" && !getNextProjectDisabled) {
-      getNextProject();
+      getNextWork();
     } else if (e.key == "ArrowLeft" && !getPrevProjectDisabled) {
-      getPrevProject();
+      getPrevWork();
     }
   }
 
@@ -27,7 +27,7 @@ export default function Slideshow() {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [getNextProjectDisabled, getPrevProjectDisabled, getNextProject, getPrevProject]);
+  }, [getNextProjectDisabled, getPrevProjectDisabled, getNextWork, getPrevWork]);
 
   return (
     <Dialog
@@ -46,7 +46,7 @@ export default function Slideshow() {
 
         <div className="relative">
           <Image
-            className="object-contain z-20 max-h-[80vh] w-full"
+            className="object-contain z-20 h-[80vh] w-full"
             alt={selectedWork.project_name}
             {...selectedWork.image}
           />
@@ -63,7 +63,7 @@ export default function Slideshow() {
         </p>
 
         <button
-          onClick={getPrevProject}
+          onClick={getPrevWork}
           disabled={getPrevProjectDisabled}
           className="disabled:hidden absolute left-0 h-full w-1/2 flex justify-start items-center group"
           tabIndex={-1}
@@ -74,7 +74,7 @@ export default function Slideshow() {
         </button>
 
         <button
-          onClick={getNextProject}
+          onClick={getNextWork}
           disabled={getNextProjectDisabled}
           className="disabled:hidden absolute right-0 h-full w-1/2 flex justify-end items-center group"
           tabIndex={-1}
