@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import Header from "../Header";
-import ContactInfo from "../contact/ContactInfo";
+import Text from "../Text";
 
 const page_title = "Alexia Planas Lee - About";
 
@@ -42,34 +41,32 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="w-full text-center relative max-w-xl mx-auto p-4">
-      <Header />
-
-      <div id="wrapper" className="w-full">
-        <Image alt="" src="/images/headshot.jpg" height={612} width={783} />
-        {/* Description */}
-        <div className="w-full text-justify mt-6 gap-2 flex flex-col">
-          <p>
-            Raised in Barcelona, Alexia Planas Lee is a Spanish and Chinese visual creative with
-            work showcased in Vogue Italia, Vanidad, and New York City’s Times Square.{" "}
-          </p>
-          <p>
-            After completing her studies in Business Management & Marketing at King’s College
-            London, Alexia gained experience at Hong Kong Tatler, Dazed and Confused, and styling
-            British music band Years & Years, soon before beginning to direct, style and produce her
-            own fashion editorials and commercial works.{" "}
-          </p>
-          <p>
-            Alexia often references art, psychology, and music in her work. As Head of Design and
-            Innovation at lablaco and its annual virtual reality event, Circular Fashion Summit, she
-            has also developed a competitive understanding of fashion circularity and new
-            technologies applied to the industry including blockchain product transparency, AI,
-            metaverse experiences (VR, AR), and digital twins.
-          </p>
-        </div>
-
-        <ContactInfo />
-      </div>
+    <div id="wrapper" className="w-full">
+      <Image alt="" src="/images/headshot.jpg" height={612} width={783} />
+      <Text className="mt-16 gap-6 flex flex-col leading-7 text-[18px]">
+        <p>
+          Raised in Barcelona, Alexia Planas Lee is a Spanish and Chinese visual creative,
+          accomplished in creative direction, fashion styling, and production, with work showcased
+          in Vogue Italia, Vanidad, and New York City’s Times Square.
+        </p>
+        <p>
+          After completing her studies in Business Management & Marketing at King’s College London,
+          Alexia gained experience at Hong Kong Tatler, Dazed and Confused, and styling the British
+          music band Years & Years. Soon after, she began directing, styling, and producing her own
+          fashion editorials and commercial works.
+        </p>
+        <p>
+          Alexia often references art, psychology, and music in her works and has a strong
+          inclination towards analog photography to achieve sombre visuals and a serene mood.
+        </p>
+        <p>
+          As Head of Design and Innovation at Lablaco and its virtual reality event, Circular
+          Fashion Summit, Alexia demonstrates a competitive understanding of fashion circularity and
+          new technologies. Her expertise includes blockchain product transparency, AI, metaverse
+          experiences (VR, AR), and digital twins, signifying potential new inputs for future
+          projects.
+        </p>
+      </Text>
     </div>
   );
 }

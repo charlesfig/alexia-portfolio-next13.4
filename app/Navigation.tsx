@@ -9,8 +9,8 @@ export default function Navigation() {
   return (
     <div
       className={
-        "md:text-right md:absolute -left-[90px] top-[170px] flex md:flex-col md:gap-2 md:w-16" +
-        " items-center md:items-end justify-center gap-5 mt-4 md:mt-0"
+        "md:text-left md:absolute left-10 top-[170px] flex md:flex-col md:gap-2" +
+        "items-center md:items-start justify-center gap-5 mt-4 md:mt-0"
       }
     >
       {navigation.map((item) => (

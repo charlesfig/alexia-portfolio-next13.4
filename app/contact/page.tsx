@@ -1,6 +1,4 @@
 import { Metadata } from "next";
-import Header from "../Header";
-import ContactInfo from "./ContactInfo";
 
 const page_title = "Alexia Planas Lee - Contact";
 
@@ -40,14 +38,5 @@ export const metadata: Metadata = {
 };
 
 export default function Contact() {
-  return (
-    <div className="w-full text-center relative max-w-xl mx-auto p-4">
-      <Header />
-
-      <div id="wrapper" className="w-full">
-        {/* Contact Info */}
-        <ContactInfo />
-      </div>
-    </div>
-  );
+  return <div id="wrapper" className="w-full"></div>;
 }

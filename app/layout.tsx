@@ -1,4 +1,7 @@
 import "../styles/globals.css";
+import Header from "./Header";
+import ContactInfo from "./contact/ContactInfo";
+
 import SlideshowProvider from "./context";
 import { oswald } from "./fonts";
 
@@ -14,7 +17,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <title>Alexia Planas Lee</title>
       </head>
       <body className={`${oswald.className} relative`}>
-        <SlideshowProvider>{children}</SlideshowProvider>
+        <Header />
+        <SlideshowProvider>
+          <div className="w-full text-center relative max-w-3xl mx-auto px-4">{children}</div>
+        </SlideshowProvider>
+        <ContactInfo />
       </body>
     </html>
   );

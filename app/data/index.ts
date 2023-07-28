@@ -54,7 +54,7 @@ export const grid_works: Array<Work> = [
     photo_id: 7,
     project_id: 1,
     project_name: "Dinner for none",
-    image: { src: "/images/dinner_for_none/ball.jpg", height: 2083, width: 2677 },
+    image: { src: "/images/dinner_for_none/ball_frame.png", height: 1500, width: 1117 },
     publication: "PETRIe Inventory",
   },
   {
@@ -89,9 +89,13 @@ export const grid_works: Array<Work> = [
     photo_id: 11,
     project_id: 2,
     project_name: "Funeral march of a marionette",
-    image: { src: "/images/funeral_march_of_a_marionette/stool.jpg", height: 666, width: 893 },
+    image: {
+      src: "/images/funeral_march_of_a_marionette/stool_frame.png",
+      height: 1500,
+      width: 1117,
+    },
     publication: "No Future Magazine Cover Story",
-    className: "object-top",
+    // className: "object-top",
   },
   {
     preview: false,
